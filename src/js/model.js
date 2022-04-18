@@ -31,7 +31,7 @@ const createRecipeObject = data => {
 export const loadRecipe = async function (id) {
   try {
     // get data from url
-    const data = await AJAX(`${API_URL}${id}`);
+    const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
     // object
     state.recipe = createRecipeObject(data);
 
